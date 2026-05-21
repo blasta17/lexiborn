@@ -1,4 +1,4 @@
-// File: /home/blasta/Documents/project/lexiborn/app/[locale]/[segment]/[slug]/page.tsx
+// File: /home/blasta/Documents/lexiborn/app/[locale]/[segment]/[slug]/page.tsx
 import * as entry from '../../../../../../app/[locale]/[segment]/[slug]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

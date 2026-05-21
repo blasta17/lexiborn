@@ -1,1 +1,13 @@
-{}
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/api/game/vote/route": "app/api/game/vote/route.js",
+  "/api/game/word/route": "app/api/game/word/route.js",
+  "/api/health/db/route": "app/api/health/db/route.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/[segment]/[slug]/page": "app/[locale]/[segment]/[slug]/page.js",
+  "/[locale]/[segment]/page": "app/[locale]/[segment]/page.js"
+}

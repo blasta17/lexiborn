@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+.vercel/
+.turbo/
+
+# Production build
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# Keep examples
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Docker / database local data
+postgres-data/
+pgdata/
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Coverage / tests
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+.cache/
