@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: lexiborn-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: lexiborn
+      POSTGRES_USER: lexiborn
+      POSTGRES_PASSWORD: lexiborn_change_me
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - lexiborn_postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lexiborn -d lexiborn"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    container_name: lexiborn-web
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      DATABASE_URL: postgresql://lexiborn:lexiborn_change_me@postgres:5432/lexiborn
+      DATABASE_SSL: "false"
+    ports:
+      - "3000:3000"
+
+volumes:
+  lexiborn_postgres_data:
